@@ -52,4 +52,23 @@ div.sign-in
 
 Add to SignIn Page
 
+## lesson 9 ##
+Form input  component
+func component gets handleChange, label, ...otherProps
+.group
+  input.form-input onChange={handleChange} {... otherProps}
+
+  {
+    label ? (<label className={ `${otherProps.value.length} ? 'shrink' : '' } form-input-label`> </label>)  : null}
+  }
+
+Insert FormInput into SignIn comp
+pass label and handleChange 
+
+## lesson 10 ##
+Custom button component
+
+
+
+
 
