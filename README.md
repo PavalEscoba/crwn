@@ -68,6 +68,11 @@ pass label and handleChange
 ## lesson 10 ##
 Custom button component
 
+Func component CustomButton (children {...otherProps})
+<btn className='custom-button' {...otherProps}>
+
+
+
 
 
 
