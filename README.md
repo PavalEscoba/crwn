@@ -30,3 +30,26 @@ collection-item
       contact
 In APp.js put header outside the switch   
 
+## lesson 8 ##
+Make sing-in-and-sign-up page + styles
+Func component
+Add to App.js
+
+Sign in Component (statefull component)
+
+in state empty strings for email and password
+handleSubmit(e) => preventDefault(); + setState empty strings
+handleChange (e) => preventDefault(); + setState({[name]: value})
+div.sign-in
+  h2 i already + span with acc and password
+  form onSubmit={this.handleSubmit}
+    input name=email type, value, req onChange
+    label email
+    input name=password type, value, req onChange
+    label password
+    
+    input submit value="submit form"
+
+Add to SignIn Page
+
+
