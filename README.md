@@ -71,6 +71,62 @@ Custom button component
 Func component CustomButton (children {...otherProps})
 <btn className='custom-button' {...otherProps}>
 
+## lesson 11 ##
+"Go to console"
+Add project
+name it continue
+
+Free plan
+Develop (authentication + db + storage + hosting)
+Project (top of page), Web (<>).
+enter internal name ('crwn-db')
+get sdk 
+  var firebaseConfig = {
+    apiKey: "AIzaSyAs_pMQHeslcL3OvXRf5Ewg6t0UUBsZevc",
+    authDomain: "crwn-db-5a7c1.firebaseapp.com",
+    projectId: "crwn-db-5a7c1",
+    storageBucket: "crwn-db-5a7c1.appspot.com",
+    messagingSenderId: "417903633271",
+    appId: "1:417903633271:web:ceb20004c859bac1b97772",
+    measurementId: "G-Q52QW1ZTCL"
+  };
+
+  ## lesson 12 ##
+  firebase.utils.js
+  Import firebase from firebase/app
+  import 'firebase/firestore'
+  import 'firebase/auth'
+
+  const config = {
+    apiKey: "AIzaSyAs_pMQHeslcL3OvXRf5Ewg6t0UUBsZevc",
+    authDomain: "crwn-db-5a7c1.firebaseapp.com",
+    projectId: "crwn-db-5a7c1",
+    storageBucket: "crwn-db-5a7c1.appspot.com",
+    messagingSenderId: "417903633271",
+    appId: "1:417903633271:web:ceb20004c859bac1b97772",
+    measurementId: "G-Q52QW1ZTCL"
+  };
+
+  firebase.initialize(config); //initializing firebase with needed config
+
+  export auth library
+  export firestore library
+
+  Making provider with Google service to get access to new Google Auth Provider class from Auth library 
+  Get cusutom parameters using provider.setCustomParameters({prompt: 'select_account'});
+  Always trigger sign in pop-up whenever we use GoogleAuthProvider;
+  export const signInWithGoogle = () => auth.signInWithPopUp(provider)
+  // export function which calls signIn pop-up with specific Google provider;
+
+  export default firebase;
+
+  Configure on the site ability to authenticate with Google
+  on a page "Authentication" -> setUp sign in method enable Google
+
+  go to signin page duplicate btn and fire signInWithGoogle method
+
+
+
 
 
 
