@@ -137,3 +137,9 @@ unsubscribeFromAuth = null;
 componentWillUnmount () => {
   unsubscribefromAuth
 }
+
+## lesson 14 ##
+give Header to know if there is a user
+if there is a user is render div with SIGNOUT sign and onClick method auth.signOut() and if not Link to /signin
+
+add styles for option and custom google Btn
