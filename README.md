@@ -125,11 +125,15 @@ get sdk
 
   go to signin page duplicate btn and fire signInWithGoogle method
 
+## lesson 13 ##
+How to make app know that user is authenticated?
+App.js. Import auth from firebase utils
+Store state of user. Make App.js a class component (extends, constructor, super, state (currentUser), render()).
+ComponentDidMount() {} we use it to fetch.
+auth.onAuthStateChanged( change state)
 
+unsubscribeFromAuth = null;
 
-
-
-
-
-
-
+componentWillUnmount () => {
+  unsubscribefromAuth
+}
