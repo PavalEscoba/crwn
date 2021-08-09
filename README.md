@@ -143,3 +143,36 @@ give Header to know if there is a user
 if there is a user is render div with SIGNOUT sign and onClick method auth.signOut() and if not Link to /signin
 
 add styles for option and custom google Btn
+
+
+## lesson 15 ##
+Make and export async function createUserProfileDocument in fb.utils. Pass there userAuth and additionalData. If there is no auth we just return.
+createUserProfileDocument = async (userAuth, additionalData) => {
+  if (!userAuth) return
+
+  console.log(firestore.doc(users/afef3f23g))
+}
+файрбэйз вяртае нам альбо рэферэнс альбо снэпшот. 
+Мы засылаем пытанне з айдзішнікам і ён вяртае аб'ект Рэферэнса і па гэтым аб'екце мы пытаемся get() снэпшот.
+createUserProfileDocument = async (userAuth, additionalData) => {
+  if (!userAuth) return
+
+  console.log(firestore.doc(users/afef3f23g))
+}
+
+ДокРэферэнс дае нам КРУД
+КолРэферэнс дае нас адд()
+ДокРэферэнс.гет() дае нам снэпшот дакумента
+КолРэферэнс.гет() дае нам снэпшот калекцыі
+
+Атрымліваем docRef і эвэйтам атрымліваем снэпшот.
+
+Калі не існуе, то ствараем запіс у файрбэйзе.
+
+Пасьля экспартуем у эпп.джс у компонентДідМаунт
+
+
+
+## lesson 16 ##
+In compDid... change user to userAuth and make it async
+To get actual user from DB
