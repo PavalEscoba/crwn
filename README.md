@@ -176,3 +176,49 @@ createUserProfileDocument = async (userAuth, additionalData) => {
 ## lesson 16 ##
 In compDid... change user to userAuth and make it async
 To get actual user from DB
+
+## lesson 17 Sign up component ##
+
+create Sign up component
+imp react, form input, custom button
+auth, createUserProfileDocument from firebase.utils
+class component
+displayName
+email
+password
+confirmPassword
+
+render
+const {displayName, email, password, confirmPassword } = this.state 
+sign-up
+  h2.title i don't have an account
+  span sign up with your email and password
+  form.sign-up-form onSubmit = this.handelSubmit
+    <FormInput type='text' name='displayName' value ={displayName}  label="Display Name" required /> 
+    <FormInput type='email' name='email' value ={email}  label="Name" required /> 
+    <FormInput type='password' name='password' value ={password}  label="Password" required /> 
+    <FormInput type='password' name='confirm password' value ={confirmPassword}  label="Confirm Password" required />
+
+    <CustomButton type="submit">Sign up<CustomButton> 
+
+    handleSubmit - async function  preventSubmit
+      if passwords dont match alert
+        return
+
+      try {
+        const {user} = auth.createUserWithEmailAndPassword(email, password);
+        await createUserProfileDocument(user, {displayName});
+        this.setState(displayName
+                      email
+                      password
+                      confirmPassword)
+        }
+      catch (errror) {
+        console.log(error);
+      }
+
+  handleChange = event => {
+    const {name, valye} = event.target;
+
+    this.setState({[name]: value})
+  }
